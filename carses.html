@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобілі н</title>
+    <style>
+        .gallery { display: flex; gap: 15px; margin-bottom: 20px; }
+        .car-container { text-align: center; }
+        .car-img { width: 200px; height: 150px; border: 2px solid #ddd; display: block; }
+        #info-field { width: 300px; padding: 10px; font-size: 16px; border: 2px solid #333; }
+    </style>
+</head>
+<body>
+    <h1>Натисніть кнопку під авто:</h1>
+    <div class="gallery">
+        <div class="car-container">
+            <img src="car1.jpg" class="car-img">
+            <button onclick="showInfo('Honda NSX, 2016 рік')">Інформація</button>
+        </div>
+        <div class="car-container">
+            <img src="car2.jpg" class="car-img">
+            <button onclick="showInfo('Nissan GT-R, 2007 рік')">Інформація</button>
+        </div>
+        <div class="car-container">
+            <img src="car3.jpg" class="car-img">
+            <button onclick="showInfo('Subaru Forester, 1997 рік')">Інформація</button>
+        </div>
+        <div class="car-container">
+            <img src="car4.jpg" class="car-img">
+            <button onclick="showInfo('Lamborghini Aventador, 2011 рік')">Інформація</button>
+        </div>
+    </div>
+    <input type="text" id="info-field" readonly placeholder="Інформація про авто...">
+    <script>
+        function showInfo(infoText) {
+            document.getElementById('info-field').value = infoText;
+        }
+    </script>
+</body>
+</html>
