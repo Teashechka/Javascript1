@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобілі</title>
+    <style>
+        .gallery { display: flex; gap: 15px; margin-bottom: 20px; }
+        .car-img { width: 200px; height: 150px; cursor: pointer; border: 2px solid #ddd; }
+        #info-field { width: 300px; padding: 10px; font-size: 16px; border: 2px solid #333; }
+    </style>
+</head>
+<body>
+    <h1>Наведіть на автомобіль:</h1>
+    <div class="gallery">
+        <img src="car1.jpg" class="car-img" data-info="Honda NSX, 2016 рік" onmouseover="showInfo(this)" onmouseout="clearInfo()">
+        <img src="car2.jpg" class="car-img" data-info="Nissan GT-R, 2007 рік" onmouseover="showInfo(this)" onmouseout="clearInfo()">
+        <img src="car3.jpg" class="car-img" data-info="Subaru Forester, 1997 рік" onmouseover="showInfo(this)" onmouseout="clearInfo()">
+        <img src="car4.jpg" class="car-img" data-info="Lamborghini Aventador, 2011 рік" onmouseover="showInfo(this)" onmouseout="clearInfo()">
+    </div>
+    <input type="text" id="info-field" readonly placeholder="Інформація про авто...">
+    <script>
+        function showInfo(element) {
+            const info = element.getAttribute('data-info');
+            document.getElementById('info-field').value = info;
+        }
+        function clearInfo() {
+            document.getElementById('info-field').value = "";
+        }
+    </script>
+</body>
+</html>
