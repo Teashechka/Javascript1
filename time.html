@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання: Час</title>
+</head>
+<body>
+    <h1>Завдання: Час через 1 хвилину</h1>
+    <button onclick="calculateTime()">Запустити завдання</button>
+    <br><br>
+    <a href="index.html">← Повернутися на головну</a>
+    <script>
+        function calculateTime() {
+            const hours = parseInt(prompt("Введіть години (0-23):"));
+            const minutes = parseInt(prompt("Введіть хвилини (0-59):"));
+            if (isNaN(hours) || isNaN(minutes) || hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+                alert("Помилка: некоректні дані!");
+                return;
+            }
+            let nextMinutes = minutes + 1;
+            let nextHours = hours;
+            if (nextMinutes === 60) {
+                nextMinutes = 0;
+                nextHours = (hours + 1) % 24;
+            }
+            const formattedTime = `${String(nextHours).padStart(2, '0')}:${String(nextMinutes).padStart(2, '0')}`;
+            alert(`Час через 1 хвилину: ${formattedTime}`);
+        }
+    </script>
+</body>
+</html>
