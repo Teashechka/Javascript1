@@ -11,7 +11,7 @@
       function displ() {
         // об'єкт р - елемент с id="fmkto"
         p = document.getElementById("fmkto");
-        p = document.getElementById("fmkto1");
+        p1 = document.getElementById("fmkto1");
         // змінюємо у об'єкта style властивість display
         if (p.style.display == "none") {
           p.style.display = "block";
@@ -24,8 +24,11 @@
   <body>
     <p>
       <img src="fmkto.jpg" id="fmkto" /> <br /><br />
-      <img src="fmkto1.jpg" id="fmkto1" /> <br /><br />
       <input type="button" value="Відобразити / сховати рисунок" onclick="displ();" />
     </p>
+  <p1>
+    <img src="fmkto1.jpg" id="fmkto1" /> <br /><br />
+      <input type="button" value="Відобразити / сховати рисунок" onclick="displ();" />
+  </p1>
   </body>
 </html>
